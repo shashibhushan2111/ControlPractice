@@ -1,0 +1,16 @@
+﻿@model ControlPractice.Models.CheckBoxList  
+@{  
+    ViewBag.Title = "www.compilemode.com";  
+}  
+<div class="form-horizontal">  
+    <h4>Select your favourite Subjects</h4>  
+        @foreach (var item in Model.CheckBoxItems)  
+        {  
+            <input id="chk@(item.Value)"  
+                   type="checkbox"  
+                   value="@item.Value"   
+                   checked="@item.IsChecked" />  
+                @item.Text <br />  
+        }  
+         
+</div> 
